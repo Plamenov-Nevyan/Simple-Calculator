@@ -1,1 +1,72 @@
-/*# sourceMappingURL=styles.css.map */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  background-color: bisque;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+.calculator .calculator-top {
+  width: 100%;
+  min-width: 5vw;
+}
+.calculator .calculator-top input {
+  width: 100%;
+  padding: 0.6em 1em;
+  border-radius: 0.6em;
+  border: 1px solid cornflowerblue;
+  background-color: azure;
+}
+.calculator .calculator-bottom {
+  display: flex;
+  gap: 1em;
+}
+.calculator .calculator-bottom .number-buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1 1 80%;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+.calculator .calculator-bottom .number-buttons .button-container {
+  flex: 1 1 33%;
+}
+.calculator .calculator-bottom .number-buttons .button-container button {
+  width: 100%;
+  padding: 0.3em 1em;
+  border: none;
+  border-radius: 0.4em;
+  background-color: azure;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.calculator .calculator-bottom .operator-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 20%;
+  gap: 0.3em;
+  flex-direction: column;
+}
+.calculator .calculator-bottom .operator-buttons .operator-container {
+  min-width: 100%;
+}
+.calculator .calculator-bottom .operator-buttons .operator-container button {
+  width: 100%;
+  padding: 0.3em 1em;
+  border: none;
+  border-radius: 0.4em;
+  background-color: cornflowerblue;
+  color: azure;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
