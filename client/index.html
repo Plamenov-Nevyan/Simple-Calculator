@@ -5,54 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="./index.js" defer></script>
     <title>Simple Calculator</title>
 </head>
 <body>
     
     <div class="calculator">
+        <span class="error-message"></span>
         <section class="calculator-top">
             <input type="text" name="operation" id="operation" disabled/>
         </section>
         <section class="calculator-bottom">
             <div class="number-buttons">
                 <div class="button-container">
-                    <button id="1">1</button>
+                    <button class="number-btn" id="1">1</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="2">2</button>
+                    <button class="number-btn" id="2">2</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="3">3</button>
+                    <button class="number-btn" id="3">3</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="4">4</button>
+                    <button class="number-btn" id="4">4</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="5">5</button>
+                    <button class="number-btn" id="5">5</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="6">6</button>
+                    <button class="number-btn" id="6">6</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="7">7</button>
+                    <button class="number-btn" id="7">7</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="8">8</button>
+                    <button class="number-btn" id="8">8</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="9">9</button>
+                    <button class="number-btn" id="9">9</button>
                 </div>
                 
                 <div class="button-container">
-                    <button id="0">0</button>
+                    <button class="number-btn" id="0">0</button>
                 </div>
                 <div class="button-container">
                     <button id="float">.</button>
@@ -63,22 +65,22 @@
             </div>
             <div class="operator-buttons">
                 <div class="operator-container">
-                    <button id="divide">/</button>
+                    <button class="operator-btn" id="divide">/</button>
                 </div>
                 <div class="operator-container">
-                    <button id="multiply">*</button>
+                    <button class="operator-btn" id="multiply">*</button>
                 </div>
                 <div class="operator-container">
-                    <button id="substract">-</button>
+                    <button class="operator-btn" id="substract">-</button>
                 </div>
                 <div class="operator-container">
-                    <button id="add">+</button>
+                    <button class="operator-btn" id="add">+</button>
                 </div>
                 <div class="operator-container">
-                    <button id="modular">%</button>
+                    <button class="operator-btn" id="modular">%</button>
                 </div>
                 <div class="operator-container">
-                    <button id="clear-input">CE</button>
+                    <button class="operator-btn" id="clear-input">CE</button>
                 </div>
             </div>
         </section>

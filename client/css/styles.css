@@ -15,6 +15,10 @@ body {
   max-width: 80vw;
   max-height: 80vh;
 }
+.calculator .error-message {
+  display: none;
+  color: red;
+}
 .calculator .calculator-top {
   width: 100%;
   min-width: 5vw;
