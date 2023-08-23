@@ -49,6 +49,11 @@ body {
                     background-color: azure;
                     color: cornflowerblue;
                     cursor: pointer;
+                    transition: ease-in-out 200ms;
+                }
+                button:hover {
+                    background-color: cornflowerblue;
+                    color: azure;
                 }
             }
         }
@@ -69,6 +74,11 @@ body {
                     background-color: cornflowerblue;
                     color: azure;
                     cursor: pointer;
+                    transition: ease-in-out 200ms;
+                }
+                button:hover {
+                    background-color: azure;
+                    color: cornflowerblue;
                 }
             }
         }

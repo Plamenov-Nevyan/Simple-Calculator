@@ -53,6 +53,11 @@ body {
   background-color: azure;
   color: cornflowerblue;
   cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+.calculator .calculator-bottom .number-buttons .button-container button:hover {
+  background-color: cornflowerblue;
+  color: azure;
 }
 .calculator .calculator-bottom .operator-buttons {
   display: flex;
@@ -73,4 +78,9 @@ body {
   background-color: cornflowerblue;
   color: azure;
   cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+.calculator .calculator-bottom .operator-buttons .operator-container button:hover {
+  background-color: azure;
+  color: cornflowerblue;
 }/*# sourceMappingURL=styles.css.map */

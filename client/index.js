@@ -2,6 +2,7 @@
 let numberBtns = document.getElementsByClassName('number-btn')
 let operatorBtns = document.getElementsByClassName('operator-btn')
 let floatBtn = document.getElementById('float')
+let equalsBtn = document.getElementById('equals')
 let numberBtnsArr = [...numberBtns]
 let operatorBtnsArr = [...operatorBtns]
 let operationsInput = document.getElementById('operation')
@@ -9,6 +10,7 @@ let errorMessage = document.querySelector('.error-message')
 numberBtnsArr.forEach(btn => btn.addEventListener('click', (event) => addNumberToOperation(event)))
 operatorBtnsArr.forEach(btn => btn.addEventListener('click', (event) => addOperator(event)))
 floatBtn.addEventListener('click', (event) => addFloat(event))
+equalsBtn.addEventListener('click', () => calculate())
 
 function addNumberToOperation(event){
     errorMessage.textContent = ''
@@ -80,9 +82,13 @@ function addFloat(event){
 async function calculate(){
     let operation = operationsInput.value.trim()
     let operationArr = operation.split(' ')
-    operationArr.split(' ').forEach((char, index) => {
-        if(char === '.'){
-            if(operationArr[index + 1] === '' || operatorBtnsArr.some(btn => btn.id === operationArr[index + 1])){
+    operationArr.forEach((char, index) => {
+        if(char.includes('.') && char.substring(char.indexOf('.') + 1) === ''){
+            if(
+                operationArr[index + 1] === '' ||
+                operationArr[index + 1] === undefined ||
+                operatorBtnsArr.some(btn => btn.textContent === operationArr[index + 1])
+                ){
                 errorMessage.textContent = 'Please finish entering your float number before calculation.'
                 errorMessage.style.display = 'block' 
                 return
@@ -92,7 +98,8 @@ async function calculate(){
   try {
     let response = await fetch('../backend/backend.php', {
         method: 'POST',
-        body: JSON.stringify(operationArr)
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({num1 : operationArr[0], operator: operationArr[1], num2: operationArr[2]})
     })
     if(response.ok){
         console.log(response)
